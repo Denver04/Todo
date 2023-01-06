@@ -89,7 +89,7 @@ function App() {
       {expand ? (
         <>
           <input placeholder='Title' className='title' value={input.title} name="title" type="text" onChange={handleChange} required/>
-          <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} rows="5" cols="40" required/>
+          <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} rows="5" cols="30" required/>
           <label>
             <span>Due Date :</span> 
             <input type="date" value={input.date} name="date" onChange={handleChange} required/>
