@@ -64,5 +64,7 @@ h4{
 .deletebtn{
   margin-left: 34vh;
   padding: 6px 12px;
-  border-radius: 35%;
+  border-radius: 25%;
+  background-color: red;
+  border: none;
 }

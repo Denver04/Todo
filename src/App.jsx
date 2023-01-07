@@ -100,7 +100,7 @@ function App() {
           <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="100" rows="2" cols="1" required/>
           <label>
             <span>Due Date :</span> 
-            <input type="date" value={input.date} name="date" onChange={handleChange} required/>
+            <input type="month" value={input.date} name="date" onChange={handleChange} required/>
           </label>
           <div className='btn'>
             <button onClick={handleClick}>Add</button>
