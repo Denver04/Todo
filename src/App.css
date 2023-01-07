@@ -1,4 +1,68 @@
-
+*{
+  margin: 0;
+  padding: 0;
+}
+.cards{
+  display: flex;
+  padding: 15px;
+}
 .header{
-  border: 2px solid red;
+  box-sizing: border-box;
+  border: 2px solid #c6c3c3;
+  box-shadow: 5px 5px 10px #cecece , -5px -5px 10px #cecece;
+  border-radius: 10px;
+}
+.h1{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+.icons{
+  font-size: 34px;
+}
+.card{
+  /* border: 2px solid red; */
+  background-image: none;
+  width: 43vh;
+  border-radius: 8px;
+  margin: 0px 15px;
+  padding: 5px;
+  box-shadow: 0 1px 5px rgb(138 137 137);
+}
+.card:hover{
+  background-color: #e0e0e09c;
+  cursor: pointer;
+}
+.card .content{
+  font-size: 17px;
+  height: 8vh;
+  padding: 10px;
+  /* overflow-x: ; */
+  text-overflow: ellipsis;
+  transition: 0.8s ease-in-out;
+  /* overflow-x: scroll; */
+}
+/* .card .content:hover{
+  overflow: scroll;
+  text-overflow: unset;
+} */
+.date{
+  height: 3vh;
+  padding: 10px;
+}
+.title{
+  font-size: 25px;
+  height: 3vh;
+  padding: 10px;
+  font-weight: bold;
+}
+h4{
+  font-size: 25px;
+}
+.deletebtn{
+  margin-left: 34vh;
+  padding: 6px 12px;
+  border-radius: 35%;
 }

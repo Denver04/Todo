@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import List from './List';
 import Header from './Header';
+import { color } from '@mui/system';
 
 function App() {
 
@@ -10,10 +10,11 @@ function App() {
 
   // document.addEventListener("mousedown", (event) => {
   //   if (concernedElement.contains(event.target)) {
-  //     // console.log("Clicked Inside");
-  //     setOpen(true);
-  //     // setOpenName("+");
-  //   } else {
+  // //     // console.log("Clicked Inside");
+  //     setOpen(false);
+  // //     // setOpenName("+");
+  //   } 
+    // else {
   //     // console.log("Clicked Outside / Elsewhere");
   //     setOpen(false);
   //   }
@@ -46,6 +47,9 @@ function App() {
     if(input.title=="" || input.content=="" || input.date==""){
       alert("Fill all the fields")
     }
+    else if(input.content.length < 50){
+      alert("Minimum 50 words need to be written")
+    }
     else{
       console.log(n);
       setTodo((todos)=>{
@@ -71,6 +75,11 @@ function App() {
     }
   }
 
+  const handleComp = () => {
+    setexpand(false);
+    setOpenName("+");
+  }
+
   const deleteTodo = (id) => {
     setTodo((prev)=>{
       return prev.filter((todo , index)=>{
@@ -83,23 +92,25 @@ function App() {
       <div className='header'>
         <Header />
       </div>
-
       <div className='head'>
       <div className='container'>
       {expand ? (
         <>
           <input placeholder='Title' className='title' value={input.title} name="title" type="text" onChange={handleChange} required/>
-          <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} rows="5" cols="30" required/>
+          <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="100" rows="2" cols="1" required/>
           <label>
             <span>Due Date :</span> 
             <input type="date" value={input.date} name="date" onChange={handleChange} required/>
           </label>
-          <button onClick={handleClick}>Add</button>
+          <div className='btn'>
+            <button onClick={handleClick}>Add</button>
+            <button className="click-text" onClick={handleComp} style={{backgroundColor: "red" , border:"none"}}>Cancel</button>
+          </div>
         </> ): 
         <div className='add-top'>
           <div className='adding'>
             <h2>Add a New To-Do to your List</h2>
-            <button onClick={handleExpand} className="click-text">{openName}</button>
+            <button onClick={handleExpand} className="click-text" style={{backgroundColor:"green"}}>{openName}</button>
           </div>
         </div>
       }   
@@ -112,7 +123,7 @@ function App() {
             <h3>Currently , you have {n} todo in your list</h3>
         </div>
       </div>
-      <div>
+      <div className='all-cards'>
         { todo.map((todos , index) => {
           return <List content={todos.content} date={todos.date} title={todos.title} key={index} id={index} onDelete={deleteTodo}/>
         }) }

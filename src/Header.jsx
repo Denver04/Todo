@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import { fontSize } from '@mui/system';
 
 function Header() {
   return (
-    <div>
+    <div className='h1'>
+        <ListAltIcon fontSize='large'/>
         <h1>To-Do List</h1>
     </div>
   )
