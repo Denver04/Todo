@@ -13,7 +13,7 @@
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138 137 137)
 }
-label > span{
+div > span{
   color: black;
   font-weight: bold;
   padding: 7px;
@@ -24,19 +24,20 @@ label > span{
 }
 .App{
     /* border: 2px solid purple; */
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding-top: 8vh;
+    /* padding-top: 8vh; */
     /* height: 92vh; */
     /* color: white; */
 }
 .header{
   margin: auto;
   border: none;
-  width: 25%;
+  width: 100%;
   text-align: center;
   padding: 13px;
-  background-image: linear-gradient(to right , #bda4a9 , #aeb2c8);
+  color: white;
+  background-color: black;
 }
 .head{
   display: flex;
@@ -56,11 +57,12 @@ label > span{
 input , textarea{
   width: 100%;
   border: none;
-  padding: 4px;
+  padding: 10px;
   outline: none;
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  /* border-bottom: 2px solid grey; */
 }
 .title{
   font-size: 20px;

@@ -97,11 +97,11 @@ function App() {
       {expand ? (
         <>
           <input placeholder='Title' className='title' value={input.title} name="title" type="text" onChange={handleChange} required/>
-          <textarea placeholder='description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="100" rows="2" cols="1" required/>
-          <label>
+          <textarea placeholder='Description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="100" rows="2" cols="1" required/>
+          <div className='dates'>
             <span>Due Date :</span> 
-            <input type="month" value={input.date} name="date" onChange={handleChange} required/>
-          </label>
+            <input type="date" value={input.date} name="date" onChange={handleChange} required/>
+          </div>
           <div className='btn'>
             <button onClick={handleClick}>Add</button>
             <button className="click-text" onClick={handleComp} style={{backgroundColor: "red" , border:"none"}}>Cancel</button>
