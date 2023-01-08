@@ -105,13 +105,13 @@ function App() {
           </div>
           <div className='btn'>
             <button onClick={handleClick} className="add" data-back="Add" data-front="Add it"></button>
-            <button className="click-text" onClick={handleComp} style={{backgroundColor: "red" , border:"none" , width:"42%"}}>Cancel</button>
+            <button className="click-text" onClick={handleComp} style={{color:"red",border:"none" , width:"42%"}}>Cancel</button>
           </div>
         </> ): 
         <div className='add-top'>
           <div className='adding'>
             <h2>Add a New To-Do to your List</h2>
-            <button onClick={handleExpand} className="click-text" style={{backgroundColor:"green" , padding:"10px 20px"}}>{openName}</button>
+            <button onClick={handleExpand} className="click-text" style={{backgroundColor:"green" , padding:"1px 15px" , color:"black" , fontWeight:"bolder" , fontSize:"32px"}}>{openName}</button>
           </div>
         </div>
       }   

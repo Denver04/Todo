@@ -84,19 +84,20 @@ button {
   font-size: 20px;
   font-weight: 500;
   font-family: inherit;
-  background-color: #002ead;
+  /* background-color: #002ead; */
   cursor: pointer;
   transition: border-color 0.25s;
-  color: white;
+  color: #002ead;
   text-align: center;
 }
 button:hover{
-  background-color: green;
+  /* background-color: green; */
   /* border: none; */
 }
 
 button:hover {
-  border-color: #646cff;
+  /* border-color: #646cff; */
+  background-color: #dbe0ff;
 }
 /* button:focus,
 button:focus-visible {
@@ -112,4 +113,7 @@ button:focus-visible {
 
 body{
   background-image: linear-gradient(to right, #e4a8b0, #c0e9ff)
+}
+.click-text:hover{
+  background-color: #f4d9d9;
 }
