@@ -1,7 +1,9 @@
 *{
   margin: 0;
   padding: 0;
+  border: none;
 }
+
 .cards{
   display: flex;
   padding: 15px;
@@ -31,9 +33,10 @@
   margin: 0px 15px;
   padding: 5px;
   box-shadow: 0 1px 5px rgb(138 137 137);
+  background-color: #e0e0e09c;
 }
 .card:hover{
-  background-color: #e0e0e09c;
+  /* background-color: #e0e0e09c; */
   cursor: pointer;
 }
 .card .content{
@@ -70,8 +73,15 @@ h4{
   margin-left: 34vh;
   padding: 6px 12px;
   border-radius: 25%;
-  background-color: red;
+  background-color: black;
+  color: white;
   border: none;
+  position: relative;
+  top: -8px;
+}
+.deletebtn:hover{
+background-color: red;
+transition: all 0.2s ease-in-out;
 }
 .dates{
   display: flex;
@@ -92,3 +102,53 @@ input[type="date"]{
   padding: 3px;
   border-radius: 3px;
 }
+.add{
+  opacity: 1;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  /* text-transform: uppercase; */
+}
+
+.add::before{
+  /* top: 0; */
+  left: 20px;
+  /* display: inline-flex; */
+  transition: 0.5s;
+}
+
+.add::after {
+  right: 19px;
+  position: relative;
+  border: none;
+}
+
+.add::before{
+  content: attr(data-back);
+  /* padding: 0 10px; */
+  opacity: 1;
+  position: relative;
+  transform: translateY(0) rotateX(0);
+}
+.add::after{
+  content: attr(data-front);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-50%) rotateY(90deg);
+  transition: 0.5s;
+}
+.add:hover:before{
+  opacity: 0;
+  transform: translateY(50%) rotateY(90deg);
+}
+.add:hover::after{
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.add{
+  text-align: center;
+}
+/* button .add :active{
+  background-color: green;
+} */

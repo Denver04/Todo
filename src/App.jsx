@@ -3,6 +3,7 @@ import './App.css'
 import List from './List';
 import Header from './Header';
 import { color } from '@mui/system';
+import AddIcon from '@mui/icons-material/Add';
 
 function App() {
 
@@ -103,14 +104,14 @@ function App() {
             <input type="date" value={input.date} name="date" onChange={handleChange} required/>
           </div>
           <div className='btn'>
-            <button onClick={handleClick}>Add</button>
-            <button className="click-text" onClick={handleComp} style={{backgroundColor: "red" , border:"none"}}>Cancel</button>
+            <button onClick={handleClick} className="add" data-back="Add" data-front="Add it"></button>
+            <button className="click-text" onClick={handleComp} style={{backgroundColor: "red" , border:"none" , width:"42%"}}>Cancel</button>
           </div>
         </> ): 
         <div className='add-top'>
           <div className='adding'>
             <h2>Add a New To-Do to your List</h2>
-            <button onClick={handleExpand} className="click-text" style={{backgroundColor:"green"}}>{openName}</button>
+            <button onClick={handleExpand} className="click-text" style={{backgroundColor:"green" , padding:"10px 20px"}}>{openName}</button>
           </div>
         </div>
       }   

@@ -33,7 +33,7 @@ div > span{
 .header{
   margin: auto;
   border: none;
-  width: 100%;
+  width: 98%;
   text-align: center;
   padding: 13px;
   color: white;
@@ -71,30 +71,37 @@ input , textarea{
     display: flex;
     flex: auto;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 25%;
     align-items: center;
+    text-align: center;
     margin-top: 14px;
 }
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.5em 1em;
-  font-size: 1em;
+  padding: 10px;
+  font-size: 20px;
   font-weight: 500;
   font-family: inherit;
   background-color: #002ead;
   cursor: pointer;
   transition: border-color 0.25s;
   color: white;
+  text-align: center;
 }
+button:hover{
+  background-color: green;
+  /* border: none; */
+}
+
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 .all-cards{
   display: flex;
