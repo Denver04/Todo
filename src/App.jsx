@@ -61,6 +61,15 @@ function App() {
         content:"",
         date:""
       });
+      setexpand(prev => !prev);
+      {
+        if(!expand){
+          setOpenName("Add");
+        }
+        else{
+          setOpenName("+");
+        }
+      }
     }
   }
 
@@ -121,7 +130,7 @@ function App() {
         {/* <button onClick={handleExpand} className="click-text">{openName}</button> */}
       </div>
       <div className='msg'>
-            <h3>Currently , you have {n} todo in your list</h3>
+            <h3>Currently , you have <span style={{color:"blue"}}>{n}</span> todo in your list</h3>
         </div>
       </div>
       <div className='all-cards'>

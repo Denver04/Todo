@@ -1,3 +1,7 @@
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* </style> */
 *{
   margin: 0;
   padding: 0;
@@ -7,11 +11,13 @@
 .cards{
   display: flex;
   padding: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 .header{
   /* box-sizing: border-box; */
   /* border: 2px solid #c6c3c3; */
-  box-shadow: 5px 5px 10px #cecece , -5px -5px 10px #cecece;
+  /* box-shadow: 5px 5px 10px #cecece , -5px -5px 10px #cecece; */
+  font-family: 'Permanent Marker', cursive;
   /* border-radius: 10px; */
 }
 .h1{
@@ -28,7 +34,7 @@
 .card{
   /* border: 2px solid red; */
   background-image: none;
-  width: 43vh;
+  width: 40vh;
   border-radius: 8px;
   margin: 0px 15px;
   padding: 5px;
@@ -70,7 +76,7 @@ h4{
   font-size: 25px;
 }
 .deletebtn{
-  margin-left: 34vh;
+  margin-left: 30vh;
   padding: 6px 12px;
   border-radius: 25%;
   background-color: black;

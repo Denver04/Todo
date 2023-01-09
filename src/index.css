@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Permanent Marker', cursive;
 }
 .msg{
   position: relative;
@@ -11,7 +12,8 @@
   padding: 15px;
   /* height: 18vh; */
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138 137 137)
+  box-shadow: 0 1px 5px rgb(138 137 137);
+  font-family: 'Permanent Marker', cursive;
 }
 div > span{
   color: black;
@@ -31,13 +33,13 @@ div > span{
     /* color: white; */
 }
 .header{
-  margin: auto;
+  /* margin: auto; */
   border: none;
-  width: 98%;
+  /* width: 98%; */
   text-align: center;
   padding: 13px;
   color: white;
-  background-color: black;
+  background-color: #000000ba;
 }
 .head{
   display: flex;
@@ -106,13 +108,15 @@ button:focus-visible {
 
 .all-cards{
   display: flex;
-  width: 100%;
+  width: 99%;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: auto;
 }
 
 body{
-  background-image: linear-gradient(to right, #e4a8b0, #c0e9ff)
+  background-image: linear-gradient(to right, #e4a8b0, #c0e9ff);
+  background-color: #f2f2f2;
+  background-image: url("https://transparenttextures.com/patterns/gplay.png");
 }
 .click-text:hover{
   background-color: #f4d9d9;
