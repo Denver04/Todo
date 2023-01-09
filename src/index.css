@@ -2,18 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto Mono', monospace
 }
 .msg{
   position: relative;
-  width: 31%;
+  width: 40%;
   margin: 30px 20px;
   background: #fff;
   padding: 15px;
   /* height: 18vh; */
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138 137 137);
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto Mono', monospace
 }
 div > span{
   color: black;
@@ -120,4 +120,111 @@ body{
 }
 .click-text:hover{
   background-color: #f4d9d9;
+}
+
+/* ----------- RESPONSIVE --------- */
+
+@media only screen and (max-width: 450px){
+  .head{
+    display: unset;
+  }
+  .h1{
+    width: unset;
+  }
+  .msg{
+    width: unset;
+  }
+  input[type="date"]{
+    width: unset;
+  }
+  .btn{
+    display: unset;
+  }
+  .add , .click-text{
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 770px) and (min-width:451px){
+  .h1{
+    width: 50%;
+  }
+  .head{
+    display: unset;
+  }
+  .container{
+    font-size: 15px;
+    width: unset;
+  }
+  .msg{
+    font-size: 18px;
+    width: unset;
+  }
+  input, textarea{
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .dates input{
+    width: 35%;
+  }
+  .dates > span{
+    font-size: 25px;
+  }
+  .btn{
+    width: 50%;
+  }
+  .btn > button{
+    font-size: 30px;
+  }
+  .title{
+    font-size: 25px;
+  }
+  .card > .title{
+    height: 4vh;
+  }
+  .card > .content{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+  .card > .date{
+    font-size: 15px;
+  }
+  .deletebtn{
+    margin-left: 34vh;
+  }
+  .dates{
+    height: 15vh;
+  }
+  .card{
+    width: 47vh;
+  }
+}
+
+@media only screen and (max-width: 1030px) and (min-width:771px){
+  .h1{
+    width: 32%;
+  }
+  .container > .title{
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .container > .content{
+    font-size: 23px;
+    letter-spacing: 2px;
+  }
+  .dates{
+    height: 12vh;
+  }
+  .dates > input{
+    width: 35%;
+  }
+  .btn{
+    width: 50%;
+  }
+  .deletebtn{
+    margin-left: 31vh;
+  }
+  .card{
+    width: 41vh;
+  }
 }

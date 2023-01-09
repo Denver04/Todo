@@ -48,8 +48,11 @@ function App() {
     if(input.title=="" || input.content=="" || input.date==""){
       alert("Fill all the fields")
     }
-    else if(input.content.length < 50){
-      alert("Minimum 50 words need to be written")
+    else if(input.content.length < 10){
+      alert("Minimum 10 words need to be written")
+    }
+    else if(input.title.length > 20){
+      alert("Title length should not be more than 20 words")
     }
     else{
       console.log(n);
@@ -96,6 +99,7 @@ function App() {
         return index !== id;
       })
     })
+    alert("To-Do has been deleted");
   }
   return (
     <div className="App">
@@ -107,7 +111,7 @@ function App() {
       {expand ? (
         <>
           <input placeholder='Title' className='title' value={input.title} name="title" type="text" onChange={handleChange} required/>
-          <textarea placeholder='Description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="100" rows="2" cols="1" required/>
+          <textarea placeholder='Description of todo' className='content' value={input.content} name="content" type="text" onChange={handleChange} maxLength="50" rows="1" cols="1" required/>
           <div className='dates'>
             <span>Due Date :</span> 
             <input type="date" value={input.date} name="date" onChange={handleChange} required/>

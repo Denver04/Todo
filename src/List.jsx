@@ -9,7 +9,7 @@ const List = (props) => {
                 <h4 className='title'> {props.title} </h4>
                 <p className='content'> {props.content} </p>
                 <p className='date'> <strong>Due Day : </strong> {props.date} </p>
-                <button className='deletebtn' onClick={()=>{props.onDelete(props.id)}}><DeleteIcon /></button>
+                <button className='deletebtn' onClick={()=>{props.onDelete(props.id)}}><DeleteIcon style={{position:"relative" , top:"4px"}} /></button>
             </div>
             
         </div>
