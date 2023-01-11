@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import './App.css'
 import List from './List';
 import Header from './Header';
-import { color } from '@mui/system';
-import AddIcon from '@mui/icons-material/Add';
+import useLocalStorage from "use-local-storage";
+// import { color } from '@mui/system';
+// import AddIcon from '@mui/icons-material/Add';
 
 function App() {
 
@@ -21,16 +22,28 @@ function App() {
   //   }
   // });
 
+  const [theme , setTheme] = useLocalStorage("theme" ? "dark" : "light");
+  
+  const switchtheme = () =>{
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  }
+  const initial = JSON.parse(localStorage.getItem("todo")) || [];
   const [input , setInput] = useState({
     title:"",
     content:"",
     date:""
   });
-  const [todo , setTodo] = useState([]);
+  const [todo , setTodo] = useState(initial);
   const [expand , setexpand] = useState(false);
   const [openName , setOpenName] = useState("+");
+
   // const msg = "You don't have any to-do";
   // const [message , setMessage] = useState(msg);
+
+  useEffect(()=>{
+    localStorage.setItem("todo" , JSON.stringify(todo));
+  } , [todo]);
 
   const n = todo.length;
 

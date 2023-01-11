@@ -154,6 +154,7 @@ input[type="date"]{
   transform: translateY(50%) rotateY(90deg);
 }
 .add:hover::after{
+  /* background-color: green; */
   opacity: 1;
   transform: translateY(0) rotateX(0);
 }

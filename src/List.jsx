@@ -8,7 +8,7 @@ const List = (props) => {
             <div className='card'>
                 <h4 className='title'> {props.title} </h4>
                 <p className='content'> {props.content} </p>
-                <p className='date'> <strong>Due Day : </strong> {props.date} </p>
+                <p className='date'> <strong style={{color:"#f36161"}}>Due Day : </strong> {props.date} </p>
                 <button className='deletebtn' onClick={()=>{props.onDelete(props.id)}}><DeleteIcon style={{position:"relative" , top:"4px"}} /></button>
             </div>
             

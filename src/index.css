@@ -63,6 +63,7 @@ input , textarea{
   outline: none;
   font-size: 1.2em;
   font-family: inherit;
+  letter-spacing: 1.5px;
   resize: none;
   /* border-bottom: 2px solid grey; */
 }
@@ -177,7 +178,7 @@ body{
     font-size: 30px;
   }
   .title{
-    font-size: 25px;
+    font-size: 20px;
   }
   .card > .title{
     height: 4vh;
@@ -226,5 +227,8 @@ body{
   }
   .card{
     width: 41vh;
+  }
+  .card > .title{
+    height: 4vh;
   }
 }
