@@ -10,6 +10,7 @@ function App() {
 
   // const concernedElement = document.querySelector(".click-text");
 
+  const s = 0;
   // document.addEventListener("mousedown", (event) => {
   //   if (concernedElement.contains(event.target)) {
   // //     // console.log("Clicked Inside");
